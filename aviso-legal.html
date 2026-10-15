@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aviso legal · JoluFish</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Figtree:wght@500;700;800&display=swap">
+<style>
+:root{--paper:#fff7e6;--ink:#15302e;--muted:#4f625d;--water:#0f5b63;--line:#eadcbc;--display:"Baloo 2",system-ui,sans-serif;--body:Figtree,system-ui,sans-serif}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:500 16px/1.6 var(--body)}
+.bar{background:var(--water);color:var(--paper)}
+.bar .in{max-width:760px;margin:0 auto;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar a{color:var(--paper);font:800 20px var(--display);text-decoration:none;display:flex;align-items:center;gap:8px}
+.bar img{width:34px;height:34px;border-radius:9px}
+.lang{display:flex;gap:4px;background:rgba(0,0,0,.25);padding:4px;border-radius:12px}
+.lang button{border:0;border-radius:9px;padding:6px 12px;font:800 13px var(--body);background:transparent;color:var(--paper);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+main{max-width:760px;margin:0 auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font:800 clamp(28px,6vw,40px)/1.1 var(--display);margin:0 0 6px;text-wrap:balance}
+h2{font:800 21px/1.25 var(--display);margin:28px 0 6px;color:var(--water)}
+p,li{max-width:68ch}ul{padding-left:22px}
+.date{color:var(--muted);font-weight:700;font-size:14px}
+.box{border:2px solid var(--line);border-radius:16px;padding:14px 16px;background:#fffdf7}
+a{color:var(--water);font-weight:700;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<div class="bar"><div class="in"><a href="index.html"><img src="icon.png" alt="">JoluFish</a>
+<div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-l="es">ES</button><button type="button" data-l="en">EN</button></div></div></div>
+
+<main lang="es" id="es">
+<h1>Aviso legal</h1>
+<p class="date">Última actualización: 15 de octubre de 2026</p>
+<p>En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), estos son los datos del titular del juego JoluFish y de esta web:</p>
+<div class="box"><p><strong>Titular:</strong> José Antonio Fernández Montoya, desarrollador independiente<br>
+<strong>Nombre comercial:</strong> Jolu Games<br>
+<strong>Domicilio:</strong> Urbanización Villas del Mediterráneo, 42 · Málaga (España)<br>
+<strong>Email de contacto y soporte:</strong> jobwinspain@gmail.com</p></div>
+<h2>Objeto</h2>
+<p>Esta web informa sobre el juego JoluFish, disponible en Google Play. El uso del juego se rige por los <a href="terminos.html">términos y condiciones</a> y el tratamiento de datos por la <a href="privacidad.html">política de privacidad</a>.</p>
+<h2>Propiedad intelectual</h2>
+<p>Los textos, imágenes, logotipos y demás contenidos de esta web y del juego pertenecen a Jolu Games. No se pueden reproducir sin permiso.</p>
+<h2>Responsabilidad</h2>
+<p>Intentamos que la información de esta web sea correcta y esté actualizada, pero puede contener errores. Los enlaces a webs de terceros (por ejemplo, de Google) se ofrecen solo como información.</p>
+<h2>Ley aplicable</h2>
+<p>Esta web se rige por la ley española.</p>
+</main>
+
+<main lang="en" id="en" hidden>
+<h1>Legal notice</h1>
+<p class="date">Last updated: October 15, 2026</p>
+<p>In accordance with Spanish Law 34/2002 on information society services and electronic commerce (LSSI), these are the details of the owner of the JoluFish game and this website:</p>
+<div class="box"><p><strong>Owner:</strong> José Antonio Fernández Montoya, independent developer<br>
+<strong>Trade name:</strong> Jolu Games<br>
+<strong>Address:</strong> Urbanización Villas del Mediterráneo, 42 · Málaga (Spain)<br>
+<strong>Contact and support email:</strong> jobwinspain@gmail.com</p></div>
+<h2>Purpose</h2>
+<p>This website provides information about the JoluFish game, available on Google Play. Use of the game is governed by the <a href="terms.html">terms and conditions</a>, and data is handled according to the <a href="privacy.html">privacy policy</a>.</p>
+<h2>Intellectual property</h2>
+<p>The texts, images, logos and other content on this website and in the game belong to Jolu Games and may not be reproduced without permission.</p>
+<h2>Liability</h2>
+<p>We try to keep the information on this website accurate and up to date, but it may contain errors. Links to third-party websites (for example, Google’s) are provided for information only.</p>
+<h2>Governing law</h2>
+<p>This website is governed by Spanish law.</p>
+</main>
+<script>
+(function(){
+  var l='es'; try{ var s=localStorage.getItem('jl'); if(s==='es'||s==='en') l=s; else if(!/^(es|ca|gl|eu)\b/i.test(navigator.language||'es')) l='en'; }catch(e){}
+  if(location.hash==='#en') l='en'; if(location.hash==='#es') l='es';
+  function set(x){ document.documentElement.lang=x; document.getElementById('es').hidden=x!=='es'; document.getElementById('en').hidden=x!=='en';
+    document.title=x==='en'?'Legal Notice · JoluFish':'Aviso legal · JoluFish';
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.l===x); }); try{ localStorage.setItem('jl',x); }catch(e){} }
+  document.querySelectorAll('.lang button').forEach(function(b){ b.onclick=function(){ set(b.dataset.l); }; });
+  set(l);
+})();
+</script>
+</body>
+</html>
