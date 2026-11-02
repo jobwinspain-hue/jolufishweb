@@ -25,6 +25,14 @@ h1{font:800 clamp(26px,6vw,38px)/1.1 var(--display);margin:0;text-wrap:balance}
 .lead{margin:0;max-width:52ch;color:#d9efec;font-size:17px}
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;font:800 16px var(--body);padding:13px 22px;border-radius:16px;box-shadow:0 5px 0 #b8331c}
 .cta small{font-weight:700;opacity:.85}
+a.cta{text-decoration:none;gap:14px;padding:12px 28px 13px 22px;transition:transform .12s,box-shadow .12s}
+a.cta:hover{transform:translateY(-2px)}
+a.cta:active{transform:translateY(3px);box-shadow:0 2px 0 #b8331c}
+.gp{width:30px;height:30px;flex:none}
+.ct{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1;text-align:left}
+.ct small{font-size:12px;letter-spacing:.06em}
+.ct b{font:800 24px/1.1 var(--display)}
+.free{margin:-4px 0 0;color:var(--muted);font-size:14px;font-weight:700}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .facts div{background:rgba(0,0,0,.22);border-radius:16px;padding:14px 10px;text-align:center}
 .facts b{display:block;font:800 30px/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
@@ -56,7 +64,8 @@ footer{text-align:center;font-size:13px;color:var(--muted)}
 </svg>
     <h1 data-es="Un juego de pesca para toda la familia" data-en="A fishing game for the whole family"></h1>
     <p class="lead" data-es="Echa cebo, lanza el anzuelo y gira el dedo para recoger. Llena tu pecera, completa la colección y desbloquea mundos nuevos, desde un estanque tranquilo hasta un mundo prehistórico lleno de dinosaurios." data-en="Throw bait, cast your hook and spin your finger to reel in. Fill your aquarium, complete the collection and unlock new worlds, from a quiet pond to a prehistoric world full of dinosaurs."></p>
-    <span class="cta"><span data-es="Próximamente en Google Play" data-en="Coming soon to Google Play"></span></span>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.jobwinspain.jolufish" target="_blank" rel="noopener"><svg class="gp" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg><span class="ct"><small data-es="DISPONIBLE GRATIS EN" data-en="GET IT FREE ON"></small><b>Google Play</b></span></a>
+    <p class="free" data-es="Gratis · Android · Español e inglés" data-en="Free · Android · Spanish and English"></p>
   </header>
   <section class="facts" aria-label="JoluFish">
     <div><b>382</b><span data-es="especies" data-en="species"></span></div>
